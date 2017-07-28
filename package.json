@@ -1,0 +1,40 @@
+{
+  "name": "home-control",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "debug": "babel-node src/index.js --inspect",
+    "nodemon": "nodemon src/index.js --exec babel-node",
+    "start": "babel-node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgretz/home-control.git"
+  },
+  "author": "Josh Gretz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jgretz/home-control/issues"
+  },
+  "homepage": "https://github.com/jgretz/home-control#readme",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "chalk": "^2.0.1",
+    "libnmap": "^0.3.9",
+    "lodash": "^4.17.4",
+    "node-samsung-remote": "^1.0.0",
+    "shelljs": "^0.7.6"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-core": "^6.22.1",
+    "babel-eslint": "^7.1.1",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-stage-1": "^6.22.0",
+    "babel-register": "^6.22.0",
+    "eslint": "^4.2.0",
+    "eslint-plugin-import": "^2.7.0",
+    "nodemon": "^1.9.2"
+  }
+}
