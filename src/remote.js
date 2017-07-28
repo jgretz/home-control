@@ -1,5 +1,4 @@
 import SamsungRemote from 'node-samsung-remote';
-import {log, logError} from './log';
 
 const exec = require('child_process').exec;
 const IP = '192.168.1.138';
@@ -11,16 +10,10 @@ export const isOn = () =>
     });
   });
 
-export const turnOff = () => {
-  const remote = new SamsungRemote({ip: IP});
+export const turnOff = () =>
+  new Promise(resolve => {
+    const remote = new SamsungRemote({ip: IP});
 
-  log('Sending Key');
-  remote.sendToDevice(SamsungRemote.keys.POWEROFF, err => {
-    if (err) {
-      logError(err);
-      return;
-    }
-
-    log('TV turned off ...');
+    remote.sendToDevice(SamsungRemote.keys.POWEROFF);
+    resolve();
   });
-};
